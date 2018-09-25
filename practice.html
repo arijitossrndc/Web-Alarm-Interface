@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+
+}
+</style>
+<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body>
+    <audio id ="myaudio">
+        <source src="Ringing-clock.mp3" type="audio/mpeg">
+    </audio>
+<div>
+    <div class="nav">
+      <p id="title">  ALARM CLOCK </p>
+    </div>
+<div class="inn">    
+<h2>
+    <input class ="day"   type="number"    placeholder= "days"   name="days"    id="days"    min="0" max="31">
+    <input class ="hr"    type="number"    placeholder= "Hour"   name="hours"   id="hours"   min="0" max="23">
+    <input class ="min"   type="number"    placeholder= "Minute" name="minutes" id="minutes" min="0" max="59">
+    <input class ="sec"   type="number"    placeholder= "Second" name="seconds" id="seconds" min="0" max="59"><br><br>&nbsp;
+    <input class ="btn"   type="button"    onclick="timer();"     value="submit"/>
+</h2>
+</div>
+
+<p id="time"></p>
+
+</div>
+<script>
+    function timer(){
+        var v4 = document.getElementById("days").value;   
+        var v1 = document.getElementById("hours").value;
+        var v2 = document.getElementById("minutes").value;
+        var v3 = document.getElementById("seconds").value; 
+
+           v = v4*24*1000*60*60 + v1*1000*60*60 + v2*1000*60 + v3*1000;
+          
+var x = setInterval (work,1000);
+
+function work()
+{
+    var now1 = new Date().getHours();
+    var now2 = new Date().getMinutes();
+    var now3 = new Date().getSeconds();
+    var now4 = new Date().getDate();
+       
+       now = now4*24*1000*60*60 + now1*1000*60*60 + now2*1000*60 + now3*1000;
+                    d = v - now ;
+    var day = Math.floor(d / (1000 * 60 * 60 * 24));                
+    var hour = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minute = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+    var second = Math.floor((d % (1000 * 60)) / 1000);       
+    
+     document.getElementById("time").innerHTML =  day +  "d "  + hour + "h "
+    + minute + "m " + second + "s" ;
+
+
+     
+    if (d<0) {
+       var y=document.getElementById("myaudio");
+       y.play();
+        document.getElementById("time").innerHTML = "TIME OUT!!";
+                        clearInterval(x); 
+                            
+
+    }
+}
+   
+
+}
+</script>
+
+</body>
+</html>

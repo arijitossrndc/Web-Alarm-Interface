@@ -1,0 +1,78 @@
+ body
+  {
+  	background:url("dawn.jpg") no-repeat;
+  background-size: cover;
+
+  }
+
+  #title{
+      text-align: center;
+      color: red;
+  }
+  #time{
+    color:white;
+    margin-top: 25px;
+    /*border:1px solid blue;*/
+    
+
+  }
+
+  .inn
+  {
+ text-align: center;
+ font-family: sans-serif;
+ /*border-width: 2px;
+ border-style: solid;
+ border-color: #00008B;
+ border-radius: 50px;
+ margin:100px 150px 50px 150px;*/
+ border-style: solid;
+ border-radius:25px;
+ border-color:#00008B; 
+ 
+  
+  }
+  .hr{
+  	width:70px;
+  	border-radius: 25px;
+  	padding: 10px;
+  	text-decoration: none;
+    
+  
+    
+  }
+  
+  .btn{
+  	width:70px;
+  	border-radius: 25px;
+  	text-decoration: none;
+  	padding:10px;
+    margin-right: 20px;
+    
+
+  	}
+    .day{
+      width:70px;
+    border-radius: 45px;
+    padding: 10px;
+    text-decoration: none;
+    
+
+    }
+  .min{
+  	width:70px;
+  	border-radius: 45px;
+  	padding: 10px;
+  	text-decoration: none;
+    
+    
+    
+  }
+  .sec{
+  	width:70px;
+  	border-radius:45px;
+  	padding: 10px;
+  	text-decoration: none;
+    
+  	
+  }
